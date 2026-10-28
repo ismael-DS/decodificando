@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Textos autorais, formação política e notícias selecionadas por Ismael Araújo.">
+  <title>Política & Sociedade — Ismael Araújo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <style>
+    .politics-intro {
+      padding-bottom: 2.5rem;
+    }
+
+    .politics-intro h1 {
+      margin-bottom: 1rem;
+    }
+
+    .politics-intro .inner-intro {
+      max-width: 620px;
+    }
+
+    .politics-content {
+      padding-top: 1rem;
+    }
+
+    .politics-section {
+      margin-bottom: 5rem;
+    }
+
+    .politics-section .inner-section-heading {
+      margin-bottom: 2rem;
+    }
+
+    .politics-section .inner-section-heading h2 {
+      margin-bottom: 0.8rem;
+    }
+
+    .politics-section .section-note {
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .politics-source {
+      margin-top: 2.5rem;
+    }
+
+    .politics-source:first-of-type {
+      margin-top: 0;
+    }
+
+    .politics-source-title {
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    }
+
+    .politics-content .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .politics-content .article-row {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .politics-content .article-main h3 {
+      line-height: 1.35;
+      margin-top: 0.4rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .politics-content .article-main > p:not(.eyebrow) {
+      line-height: 1.65;
+      margin-bottom: 0.8rem;
+    }
+
+    .politics-content .article-tags {
+      display: inline-block;
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    .politics-reading {
+      margin-top: 2rem;
+      padding: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .politics-reading h3 {
+      line-height: 1.4;
+      margin: 1rem 0;
+    }
+
+    .politics-reading p {
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .politics-reading .reading-label {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .politics-reading .reading-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .politics-reading ul {
+      padding-left: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .politics-reading li {
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
+    }
+
+    .politics-bottom-note {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .article-back {
+      display: inline-block;
+      padding: 0.75rem 0;
+      margin-bottom: 1.5rem;
+      border: none;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-size: 0.75rem;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .article-back:hover {
+      opacity: 1;
+    }
+
+    #artigo-eleitoral {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    #artigo-eleitoral h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin: 1.5rem 0;
+    }
+
+    #artigo-eleitoral h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #artigo-eleitoral p {
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+    }
+
+    #artigo-eleitoral .article-intro {
+      font-size: 1.15rem;
+      opacity: 0.8;
+    }
+
+    #artigo-eleitoral blockquote {
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 2px solid currentColor;
+      opacity: 0.85;
+      line-height: 1.8;
+    }
+
+    #artigo-eleitoral[hidden],
+    #lista-textos[hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .politics-section {
+        margin-bottom: 3.5rem;
+      }
+
+      .politics-content .article-row {
+        gap: 0.8rem;
+      }
+
+      .politics-content .article-main h3 {
+        overflow-wrap: anywhere;
+      }
+
+      #artigo-eleitoral h1 {
+        font-size: 2rem;
+      }
+
+      #artigo-eleitoral blockquote {
+        margin: 1.5rem 0;
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="inner-page page-03">
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Ismael Araújo — início">
+      <span class="brand-mark">IA<span>.</span></span>
+      <span class="brand-name">
+        ISMAEL ARAÚJO<br>
+        <small>ARQUIVO PESSOAL / 001</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="menu-toggle-label">MENU</span>
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
+      <a href="cbmce.html">CBMCE <span>01</span></a>
+      <a href="politica.html" aria-current="page">Política <span>02</span></a>
+      <a href="sobre.html">Sobre <span>03</span></a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ABERTURA -->
+
+    <section class="inner-masthead section-shell politics-intro">
+
+      <div class="inner-breadcrumb mono">
+        <a href="../index.html">INÍCIO</a>
+        <span>/</span>
+        <span>POLÍTICA</span>
+      </div>
+
+      <p class="eyebrow">
+        <span class="status-dot"></span>
+        POLÍTICA & SOCIEDADE
+      </p>
+
+      <h1>Política <em>em perspectiva.</em></h1>
+
+      <p class="inner-intro">
+        Textos autorais, formação marxista e notícias selecionadas.
+      </p>
+
+      <span class="inner-page-number mono">02 / 2026</span>
+
+    </section>
+
+    <section class="inner-content section-shell politics-content">
+
+      <!-- 01 — TEXTOS AUTORAIS -->
+
+      <section class="politics-section" id="textos-autorais">
+
+        <div id="lista-textos">
+
+          <div class="inner-section-heading">
+            <p class="mono section-kicker">01 / TEXTOS AUTORAIS</p>
+            <h2>Minhas <span>análises.</span></h2>
+          </div>
+
+          <div class="article-list">
+
+            <a
+              class="article-row"
+              href="#analise-eleitoral"
+              onclick="abrirArtigo(event)"
+            >
+              <span class="article-number mono">01</span>
+
+              <div class="article-main">
+                <p class="eyebrow">CONJUNTURA ELEITORAL · EM PREPARAÇÃO</p>
+                <h3>O segundo turno e as disputas para além das urnas</h3>
+                <p>
+                  Uma análise dos resultados, das forças políticas em disputa
+                  e dos interesses sociais envolvidos.
+                </p>
+              </div>
+
+              <span class="article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- LEITURA INTERNA DO ARTIGO -->
+
+        <article
+          class="article-reading politics-reading"
+          id="artigo-eleitoral"
+          hidden
+        >
+
+          <button class="article-back mono" type="button" onclick="voltarArtigos()">
+            ← VOLTAR AOS TEXTOS
+          </button>
+
+          <div class="reading-label mono">
+            <span>ANÁLISE / CONJUNTURA ELEITORAL</span>
+            <span>28 OUT 2026</span>
+          </div>
+
+          <h1>O segundo turno e as disputas para além das urnas</h1>
+
+          <p class="article-intro">
+            Uma análise dos resultados, das forças políticas em disputa
+            e dos interesses sociais envolvidos.
+          </p>
+
+          <hr>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur
+            et. Aenean lacinia bibendum nulla sed consectetur.
+          </p>
+
+          <h2>O contexto da disputa</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
+            id ligula porta felis euismod semper. Maecenas faucibus mollis
+            interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+          </p>
+
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Sed posuere
+            consectetur est at lobortis. Nullam id dolor id nibh ultricies
+            vehicula ut id elit.
+          </p>
+
+          <h2>Interesses e forças políticas</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel
+            augue laoreet rutrum faucibus dolor auctor.
+          </p>
+
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            A reflexão política exige atenção ao contexto histórico e às
+            condições concretas em que os acontecimentos se desenvolvem.
+          </blockquote>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+            dui. Nulla vitae elit libero, a pharetra augue.
+          </p>
+
+          <hr>
+
+          <p class="mono muted-note">FIM DO TEXTO</p>
+
+          <button class="article-back mono" type="button" onclick="voltarArtigos()">
+            ← VOLTAR AOS TEXTOS
+          </button>
+
+        </article>
+
+      </section>
+
+      <!-- 02 — FORMAÇÃO POLÍTICA -->
+
+      <section class="politics-section">
+
+        <div class="inner-section-heading">
+          <p class="mono section-kicker">02 / FORMAÇÃO POLÍTICA</p>
+          <h2>Estudar o <span>marxismo.</span></h2>
+          <p class="section-note">
+            Leituras para começar a compreender os fundamentos,
+            o método e a tradição marxista.
+          </p>
+        </div>
+
+        <div class="article-list">
+
+          <a
+            class="article-row"
+            href="https://www.marxists.org/portugues/lenin/1913/03/tresfont.htm#tr1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="article-number mono">01</span>
+
+            <div class="article-main">
+              <p class="eyebrow">INTRODUÇÃO AO MARXISMO · LÊNIN</p>
+              <h3>As Três Fontes e as Três Partes Constitutivas do Marxismo</h3>
+              <p>
+                Uma apresentação das raízes filosóficas, econômicas
+                e socialistas do pensamento marxista.
+              </p>
+              <span class="article-tags mono">FILOSOFIA · ECONOMIA · SOCIALISMO</span>
+            </div>
+
+            <span class="article-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="article-row"
+            href="https://www.marxists.org/portugues/marx/1847/11/principios.htm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="article-number mono">02</span>
+
+            <div class="article-main">
+              <p class="eyebrow">INTRODUÇÃO · ENGELS</p>
+              <h3>Princípios Básicos do Comunismo</h3>
+              <p>
+                Perguntas e respostas sobre comunismo, classe trabalhadora,
+                capitalismo e transformação social.
+              </p>
+              <span class="article-tags mono">ENGELS · COMUNISMO · CLASSES</span>
+            </div>
+
+            <span class="article-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="article-row"
+            href="https://www.marxists.org/portugues/marx/1848/ManifestoDoPartidoComunista/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="article-number mono">03</span>
+
+            <div class="article-main">
+              <p class="eyebrow">TEXTO CLÁSSICO · MARX E ENGELS</p>
+              <h3>Manifesto do Partido Comunista</h3>
+              <p>
+                Uma exposição histórica da luta de classes e uma defesa
+                da organização política do proletariado.
+              </p>
+              <span class="article-tags mono">LUTA DE CLASSES · ORGANIZAÇÃO</span>
+            </div>
+
+            <span class="article-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="article-row"
+            href="https://www.marxists.org/portugues/lenin/1902/quefazer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="article-number mono">04</span>
+
+            <div class="article-main">
+              <p class="eyebrow">ORGANIZAÇÃO POLÍTICA · LÊNIN</p>
+              <h3>Que Fazer?</h3>
+              <p>
+                Uma discussão sobre consciência política, organização
+                revolucionária e o papel de um partido de vanguarda.
+                É uma leitura para aprofundar após os textos introdutórios.
+              </p>
+              <span class="article-tags mono">LÊNIN · PARTIDO · ESTRATÉGIA</span>
+            </div>
+
+            <span class="article-arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </section>
+
+      <!-- 03 — NOTÍCIAS -->
+
+      <section class="politics-section">
+
+        <div class="inner-section-heading">
+          <p class="mono section-kicker">03 / NOTÍCIAS</p>
+          <h2>Leituras da <span>conjuntura.</span></h2>
+        </div>
+
+        <!-- ICL NOTÍCIAS -->
+
+        <div class="politics-source">
+
+          <div class="reading-label mono politics-source-title">
+            <span>ICL NOTÍCIAS</span>
+            <span>02 MATÉRIAS</span>
+          </div>
+
+          <div class="article-list">
+
+            <a
+              class="article-row"
+              href="https://iclnoticias.com.br/flavio-bolsonaro-escondeu-argentina-foi-eua/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="article-number mono">01</span>
+
+              <div class="article-main">
+                <p class="eyebrow">POLÍTICA BRASILEIRA</p>
+                <h3>Flávio Bolsonaro escondeu Argentina e foi aos EUA</h3>
+                <span class="article-tags mono">BOLSONARO · POLÍTICA</span>
+              </div>
+
+              <span class="article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="article-row"
+              href="https://iclnoticias.com.br/tst-prepara-medidas-duras-contra-patroes/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="article-number mono">02</span>
+
+              <div class="article-main">
+                <p class="eyebrow">TRABALHO E JUSTIÇA</p>
+                <h3>TST prepara medidas duras contra patrões</h3>
+                <span class="article-tags mono">TRABALHO · DIREITOS</span>
+              </div>
+
+              <span class="article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- JORNAL A VERDADE -->
+
+        <div class="politics-source">
+
+          <div class="reading-label mono politics-source-title">
+            <span>JORNAL A VERDADE</span>
+            <span>03 MATÉRIAS</span>
+          </div>
+
+          <div class="article-list">
+
+            <a
+              class="article-row"
+              href="https://averdade.org.br/2026/10/trump-nao-reconhece-eleicoes-do-brasil/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="article-number mono">03</span>
+
+              <div class="article-main">
+                <p class="eyebrow">POLÍTICA INTERNACIONAL</p>
+                <h3>Trump não reconhece eleições do Brasil</h3>
+                <span class="article-tags mono">ESTADOS UNIDOS · BRASIL</span>
+              </div>
+
+              <span class="article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="article-row"
+              href="https://averdade.org.br/2026/10/por-tras-do-sonho-americano-povo-estadunidense-vive-um-pesadelo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="article-number mono">04</span>
+
+              <div class="article-main">
+                <p class="eyebrow">SOCIEDADE E ECONOMIA</p>
+                <h3>Por trás do sonho americano, povo estadunidense vive um pesadelo</h3>
+                <span class="article-tags mono">ESTADOS UNIDOS · DESIGUALDADE</span>
+              </div>
+
+              <span class="article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="article-row"
+              href="https://averdade.org.br/2026/10/fascistas-tentam-golpe-nas-eleicoes-e-milhares-de-trabalhadores-sao-impedidos-de-votar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="article-number mono">05</span>
+
+              <div class="article-main">
+                <p class="eyebrow">ELEIÇÕES E LUTA POLÍTICA</p>
+                <h3>Fascistas tentam golpe nas eleições e milhares de trabalhadores são impedidos de votar</h3>
+                <span class="article-tags mono">ELEIÇÕES · CLASSE TRABALHADORA</span>
+              </div>
+
+              <span class="article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+        </div>
+
+      </section>
+
+      <div class="politics-bottom-note">
+        <span class="mono">CADERNO EM CONSTRUÇÃO</span>
+        <p>
+          Textos autorais, materiais de estudo e notícias selecionadas serão
+          acrescentados conforme novas leituras e análises forem desenvolvidas.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer section-shell">
+
+    <a class="footer-brand" href="../index.html">IA<span>.</span></a>
+
+    <p class="mono">UM ARQUIVO PESSOAL EM CONSTRUÇÃO.</p>
+
+    <a class="mono back-top" href="#conteudo">VOLTAR AO TOPO ↑</a>
+
+    <p class="footer-copy">
+      © <span id="current-year">2026</span> Ismael Araújo
+    </p>
+
+  </footer>
+
+</body>
+</html>
