@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#151515">
 
-  <meta name="description" content="Biblioteca Formação Esquerda Radical — espaço de estudo, formação marxista e reflexão política.">
+  <meta name="description" content="Biblioteca Formação Esquerda Radical — formação marxista e estudo político.">
 
   <title>Formação Marxista — Ismael Araújo</title>
 
@@ -19,88 +20,122 @@
   <script src="../js/main.js" defer></script>
 
   <style>
-    .formation-intro {
-      padding-bottom: 2rem;
-    }
-
-    .formation-intro h1 {
-      margin-bottom: 1rem;
-    }
-
-    .formation-actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .formation-back,
-    .formation-external {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .formation-embed {
-      position: relative;
+    /* A página inteira ocupa a janela */
+    html,
+    body {
       width: 100%;
-      height: 85vh;
-      min-height: 700px;
+      height: 100%;
+      height: 100dvh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body.formation-page {
+      display: flex;
+      flex-direction: column;
+      background: #191919;
+    }
+
+    /* Cabeçalho original do site */
+    .formation-page .site-header {
+      flex-shrink: 0;
+    }
+
+    /* Área principal sem rolagem externa */
+    .formation-main {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Breadcrumb */
+    .formation-breadcrumb {
+      flex-shrink: 0;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    /* Área da biblioteca */
+    .formation-container {
+      position: relative;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
       overflow: hidden;
       background: #191919;
-      border: 1px solid rgba(128, 128, 128, 0.25);
-      border-radius: 8px;
     }
 
-    .formation-embed iframe {
+    .formation-container iframe {
+      position: absolute;
+      inset: 0;
       display: block;
       width: 100%;
       height: 100%;
       border: none;
+      background: #191919;
     }
 
-    .formation-watermark-cover {
+    /* Marca d'água própria */
+    .formation-watermark {
       position: absolute;
+      z-index: 10;
       bottom: 0;
       left: 0;
-      width: 180px;
-      height: 45px;
+
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+
+      padding: 0.65rem 1rem;
       background: #191919;
-      pointer-events: none;
-      z-index: 10;
+
+      color: #aaa;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+    }
+
+    .formation-watermark .watermark-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f2f0e9;
+      letter-spacing: -0.08em;
+    }
+
+    .formation-watermark .watermark-logo span {
+      color: #d5a35b;
+    }
+
+    .formation-watermark:hover {
+      opacity: 0.75;
     }
 
     @media (max-width: 768px) {
-      .formation-embed {
-        height: 80vh;
-        min-height: 650px;
-        border-radius: 5px;
+      .formation-breadcrumb {
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
       }
 
-      .formation-watermark-cover {
-        width: 150px;
-        height: 40px;
-      }
-
-      .formation-actions {
-        align-items: flex-start;
+      .formation-watermark {
+        padding: 0.55rem 0.75rem;
+        font-size: 0.58rem;
       }
     }
   </style>
 </head>
 
-<body class="inner-page page-03">
-
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<body class="inner-page formation-page">
 
   <header class="site-header">
 
-    <a class="brand" href="../index.html" aria-label="Ismael Araújo — início">
+    <a class="brand" href="../index.html"
+       aria-label="Ismael Araújo — início">
       <span class="brand-mark">IA<span>.</span></span>
+
       <span class="brand-name">
         ISMAEL ARAÚJO<br>
         <small>ARQUIVO PESSOAL / 001</small>
@@ -108,77 +143,57 @@
     </a>
 
     <button class="menu-toggle" type="button"
-            aria-expanded="false" aria-controls="primary-nav">
+            aria-expanded="false"
+            aria-controls="primary-nav">
       <span class="menu-toggle-label">MENU</span>
-      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+      <span class="menu-icon" aria-hidden="true">
+        <i></i><i></i>
+      </span>
     </button>
 
     <nav class="primary-nav" id="primary-nav"
          aria-label="Navegação principal">
       <a href="cbmce.html">CBMCE <span>01</span></a>
-      <a href="politica.html" aria-current="page">Política <span>02</span></a>
+      <a href="politica.html" aria-current="page">
+        Política <span>02</span>
+      </a>
       <a href="sobre.html">Sobre <span>03</span></a>
     </nav>
 
   </header>
 
-  <main id="conteudo">
+  <main class="formation-main" id="conteudo">
 
-    <section class="inner-masthead section-shell formation-intro">
+    <!-- NAVEGAÇÃO -->
+    <div class="inner-breadcrumb mono section-shell formation-breadcrumb">
 
-      <div class="inner-breadcrumb mono">
-        <a href="../index.html">INÍCIO</a>
-        <span>/</span>
-        <a href="politica.html">POLÍTICA</a>
-        <span>/</span>
-        <span>FORMAÇÃO</span>
-      </div>
+      <a href="../index.html">INÍCIO</a>
+      <span>/</span>
+      <a href="politica.html">POLÍTICA</a>
+      <span>/</span>
+      <span>FORMAÇÃO</span>
 
-      <p class="eyebrow">
-        <span class="status-dot"></span>
-        FORMAÇÃO POLÍTICA
-      </p>
+    </div>
 
-      <h1>Estudar para <em>transformar.</em></h1>
+    <!-- BIBLIOTECA INCORPORADA -->
+    <section class="formation-container">
 
-      <p class="inner-intro">
-        Um espaço dedicado à formação teórica, ao estudo do
-        marxismo e à compreensão das experiências históricas
-        de organização e transformação social.
-      </p>
+      <iframe
+        src="https://unaware-warbler.super.site/"
+        title="Biblioteca Formação Esquerda Radical"
+        loading="eager"
+        allowfullscreen>
+      </iframe>
 
-    </section>
+      <!-- IDENTIDADE VISUAL PRÓPRIA -->
+      <a href="../index.html"
+         class="formation-watermark"
+         aria-label="Voltar ao arquivo pessoal de Ismael Araújo">
 
-    <section class="inner-content section-shell">
+        <span class="watermark-logo">IA<span>.</span></span>
+        <span>ARQUIVO PESSOAL</span>
 
-      <div class="formation-actions">
-
-        <a href="politica.html"
-           class="formation-back">
-          ← VOLTAR À POLÍTICA & SOCIEDADE
-        </a>
-
-        <a href="https://unaware-warbler.super.site/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="formation-external">
-          ABRIR BIBLIOTECA EM NOVA ABA ↗
-        </a>
-
-      </div>
-
-      <div class="formation-embed">
-
-        <iframe
-          src="https://unaware-warbler.super.site/"
-          title="Biblioteca Formação Esquerda Radical"
-          loading="eager"
-          allowfullscreen>
-        </iframe>
-
-        <div class="formation-watermark-cover"></div>
-
-      </div>
+      </a>
 
     </section>
 
@@ -186,3 +201,4 @@
 
 </body>
 </html>
+```
