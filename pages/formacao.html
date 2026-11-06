@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#151515">
+
+  <meta name="description" content="Biblioteca Formação Esquerda Radical — espaço de estudo, formação marxista e reflexão política.">
+
+  <title>Formação Marxista — Ismael Araújo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <style>
+    .formation-intro {
+      padding-bottom: 2rem;
+    }
+
+    .formation-intro h1 {
+      margin-bottom: 1rem;
+    }
+
+    .formation-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .formation-back,
+    .formation-external {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .formation-embed {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      min-height: 700px;
+      overflow: hidden;
+      background: #191919;
+      border: 1px solid rgba(128, 128, 128, 0.25);
+      border-radius: 8px;
+    }
+
+    .formation-embed iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .formation-watermark-cover {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 180px;
+      height: 45px;
+      background: #191919;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    @media (max-width: 768px) {
+      .formation-embed {
+        height: 80vh;
+        min-height: 650px;
+        border-radius: 5px;
+      }
+
+      .formation-watermark-cover {
+        width: 150px;
+        height: 40px;
+      }
+
+      .formation-actions {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body class="inner-page page-03">
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+
+    <a class="brand" href="../index.html" aria-label="Ismael Araújo — início">
+      <span class="brand-mark">IA<span>.</span></span>
+      <span class="brand-name">
+        ISMAEL ARAÚJO<br>
+        <small>ARQUIVO PESSOAL / 001</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button"
+            aria-expanded="false" aria-controls="primary-nav">
+      <span class="menu-toggle-label">MENU</span>
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav"
+         aria-label="Navegação principal">
+      <a href="cbmce.html">CBMCE <span>01</span></a>
+      <a href="politica.html" aria-current="page">Política <span>02</span></a>
+      <a href="sobre.html">Sobre <span>03</span></a>
+    </nav>
+
+  </header>
+
+  <main id="conteudo">
+
+    <section class="inner-masthead section-shell formation-intro">
+
+      <div class="inner-breadcrumb mono">
+        <a href="../index.html">INÍCIO</a>
+        <span>/</span>
+        <a href="politica.html">POLÍTICA</a>
+        <span>/</span>
+        <span>FORMAÇÃO</span>
+      </div>
+
+      <p class="eyebrow">
+        <span class="status-dot"></span>
+        FORMAÇÃO POLÍTICA
+      </p>
+
+      <h1>Estudar para <em>transformar.</em></h1>
+
+      <p class="inner-intro">
+        Um espaço dedicado à formação teórica, ao estudo do
+        marxismo e à compreensão das experiências históricas
+        de organização e transformação social.
+      </p>
+
+    </section>
+
+    <section class="inner-content section-shell">
+
+      <div class="formation-actions">
+
+        <a href="politica.html"
+           class="formation-back">
+          ← VOLTAR À POLÍTICA & SOCIEDADE
+        </a>
+
+        <a href="https://unaware-warbler.super.site/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="formation-external">
+          ABRIR BIBLIOTECA EM NOVA ABA ↗
+        </a>
+
+      </div>
+
+      <div class="formation-embed">
+
+        <iframe
+          src="https://unaware-warbler.super.site/"
+          title="Biblioteca Formação Esquerda Radical"
+          loading="eager"
+          allowfullscreen>
+        </iframe>
+
+        <div class="formation-watermark-cover"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
