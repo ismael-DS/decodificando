@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100d0d">
+<meta name="description" content="Guia rápido de orientação política e mobilização sobre o PLP 299/2026.">
+<title>PLP 299/2026 — Guia de mobilização</title>
+<style>
+:root{
+  --bg:#100d0d;--panel:#191414;--panel2:#211a19;--ink:#f1e7d5;
+  --muted:#b4a99a;--red:#d52b2e;--red2:#a91f24;--line:#594a40;
+  --gold:#e7cda7;--green:#9fc4a4;--max:980px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+ margin:0;background-color:var(--bg);color:var(--ink);
+ font-family:Arial,Helvetica,sans-serif;line-height:1.62;
+ background-image:radial-gradient(#ffffff0d .7px,transparent .7px);
+ background-size:5px 5px;
+}
+a{color:var(--gold);text-underline-offset:3px}
+a:hover{color:#fff}
+button{font:inherit}
+.topbar{
+ position:sticky;top:0;z-index:10;background:#100d0df2;
+ border-bottom:1px solid #4c3d35;backdrop-filter:blur(12px)
+}
+.topinner{max-width:var(--max);margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);font-weight:900;letter-spacing:.12em}
+.brandmark{width:36px;height:36px;background:var(--red);display:grid;place-items:center;font-size:21px}
+.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.18em;font-weight:700}
+.top-actions{display:flex;gap:8px;align-items:center}
+.top-actions a,.top-actions button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:8px 12px;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.top-actions a:hover,.top-actions button:hover{background:var(--red);border-color:var(--red)}
+.wrap{max-width:var(--max);margin:auto;padding:0 22px}
+.hero{padding:72px 0 46px;position:relative;overflow:hidden}
+.kicker{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3,.display{font-family:"Arial Narrow","Roboto Condensed",Impact,sans-serif;text-transform:uppercase;line-height:.98;letter-spacing:.015em}
+h1{font-size:clamp(48px,9vw,92px);max-width:850px;margin:15px 0 22px}
+h1 span{color:var(--red)}
+.lede{font-size:clamp(17px,2.2vw,21px);color:#d4c8b8;max-width:720px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:27px}
+.pill{border:1px solid var(--line);padding:6px 10px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.alert{border-left:5px solid var(--red);background:var(--panel);padding:19px 21px;margin:28px 0 0;max-width:780px}
+.alert strong{color:#fff}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:38px;padding:28px 0 80px}
+.sidebar{position:sticky;top:78px;align-self:start}
+.sidebar b{display:block;font-size:11px;color:var(--red);letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.sidebar a{display:block;color:var(--muted);text-decoration:none;font-size:13px;padding:7px 0;border-bottom:1px solid #ffffff12}
+.sidebar a:hover{color:var(--ink);padding-left:5px}
+main{min-width:0}
+section{margin:0 0 54px}
+.section-no{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+h2{font-size:clamp(31px,5vw,47px);margin:8px 0 18px}
+h3{font-size:25px;margin:0 0 10px}
+p{margin:0 0 13px}
+.muted{color:var(--muted)}
+.rule{height:1px;background:linear-gradient(90deg,var(--red),transparent);margin:22px 0}
+.card{background:var(--panel);border:1px solid #ffffff16;padding:21px;margin:15px 0}
+.card.redline{border-left:4px solid var(--red)}
+.card.goldline{border-left:4px solid var(--gold)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.stat{background:var(--panel2);padding:18px;border:1px solid #ffffff12}
+.stat strong{display:block;color:var(--red);font-family:Impact,sans-serif;font-size:42px;line-height:1.1}
+.stat span{font-size:13px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:13px}
+ul{padding-left:20px;margin:10px 0}
+li{margin:7px 0}
+.accordion{border:1px solid #ffffff1c;margin:10px 0;background:var(--panel)}
+.accordion summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:800}
+.accordion summary::-webkit-details-marker{display:none}
+.accordion summary:after{content:"+";float:right;color:var(--red);font-size:20px}
+.accordion[open] summary:after{content:"−"}
+.answer{padding:0 18px 17px;color:#d2c7b8}
+.copybox{position:relative;background:#0b0909;border:1px solid var(--line);padding:18px 90px 18px 18px;margin:14px 0;color:#e7d9c7}
+.copybox p:last-child{margin:0}
+.copybtn{position:absolute;right:10px;top:10px;background:var(--red);border:0;color:#fff;padding:7px 10px;font-size:10px;font-weight:900;text-transform:uppercase;cursor:pointer}
+.steps{counter-reset:step;display:grid;gap:10px}
+.step{counter-increment:step;display:grid;grid-template-columns:38px 1fr;gap:13px;background:var(--panel);padding:15px;border:1px solid #ffffff12}
+.step:before{content:counter(step,decimal-leading-zero);font-family:Impact,sans-serif;color:var(--red);font-size:25px}
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.do,.dont{padding:17px;background:var(--panel);border-top:3px solid var(--green)}
+.dont{border-color:var(--red)}
+.do b,.dont b{display:block;text-transform:uppercase;letter-spacing:.1em;font-size:12px;margin-bottom:8px}
+.mini-example{margin:16px 0;padding:16px;background:#171717;border:1px solid #ffffff24;border-left:3px solid var(--red)}
+.mini-example>strong{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11px;margin-bottom:12px;color:var(--muted)}
+.example-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:10px 0;border-bottom:1px solid #ffffff18;font-size:13px}
+.example-row b{font-size:15px;color:var(--ink)}.example-row span:last-child{grid-column:1/-1;color:var(--muted);font-size:12px}
+.example-diff{margin:12px 0 5px!important;color:#ff7777;font-weight:900}.mini-example small{color:var(--muted);font-size:11px}
+.sources a{display:block;padding:10px 0;border-bottom:1px solid #ffffff18}
+.footer{border-top:1px solid var(--line);padding:25px 0 45px;color:var(--muted);font-size:12px}
+.footer strong{color:var(--ink)}
+.backtop{display:inline-block;margin-top:12px}
+@media(max-width:760px){
+ .layout{grid-template-columns:1fr;gap:20px;padding-top:12px}
+ .sidebar{position:relative;top:auto;display:flex;overflow:auto;gap:14px;padding:8px 0 14px;border-bottom:1px solid var(--line)}
+ .sidebar b{display:none}.sidebar a{white-space:nowrap;border:1px solid var(--line);padding:7px 10px}
+ .hero{padding:50px 0 30px}.grid2,.do-dont{grid-template-columns:1fr}
+ .top-actions a{display:none}
+}
+@media print{
+ body{background:#fff;color:#111}.topbar,.sidebar,.copybtn{display:none}
+ .wrap{max-width:none;padding:0}.layout{display:block}.card,.accordion,.stat,.step,.do,.dont{background:#fff;color:#111;border-color:#bbb}
+ .muted,.answer,.lede,.note{color:#333}a{color:#111}section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="topinner">
+  <a class="brand" href="#inicio"><span class="brandmark">★</span><span>GUIA DE MOBILIZAÇÃO<small>PLP 299/2026</small></span></a>
+  <div class="top-actions"><a href="#perguntas">Perguntas rápidas</a><button onclick="window.print()">Imprimir / PDF</button></div>
+ </div>
+</header>
+
+<div class="wrap" id="inicio">
+ <header class="hero">
+  <div class="kicker">Orientação política · leitura rápida</div>
+  <h1>O orçamento é uma escolha.<br><span>Vamos disputar prioridades.</span></h1>
+  <p class="lede">Um guia curto para entender o PLP 299/2026, defender nossa posição e transformar a crítica em conteúdo, conversa e mobilização.</p>
+  <div class="hero-meta"><span class="pill">Material de uso interno</span><span class="pill">Atualizado em 16/11/2026</span><span class="pill">Formação + comunicação</span></div>
+  <div class="alert"><strong>Nosso ponto de partida:</strong> somos frontalmente contrários aos mecanismos de austeridade desta proposta. A pauta é urgente: defender o financiamento das políticas sociais e pressionar pela rejeição ou revisão dos dispositivos problemáticos. Não é uma disputa pessoal com Lula, Janones, Jones Manoel ou qualquer outra figura.</div>
+ </header>
+
+ <div class="layout">
+  <nav class="sidebar" aria-label="Navegação do guia">
+   <b>Neste guia</b>
+   <a href="#posicao">Nossa posição</a><a href="#entenda">O que é</a><a href="#problemas">Onde pega</a>
+   <a href="#perguntas">Perguntas rápidas</a><a href="#linha">Linha política</a><a href="#conteudo">Fazer conteúdo</a><a href="#fontes">Fontes</a>
+  </nav>
+  <main>
+   <section id="posicao">
+    <div class="section-no">01 · Ponto de partida</div><h2>O que queremos defender?</h2>
+    <p>O PLP 299/2026 reúne mudanças nas regras fiscais e instrumentos de contenção de despesas. Nossa crítica é política e concreta: não aceitamos que o ajuste das contas públicas restrinja o espaço de financiamento dos serviços e direitos sociais.</p>
+    <div class="card redline"><h3>Mensagem central</h3><p><strong>O ajuste não pode ser feito sacrificando o orçamento necessário para garantir direitos.</strong> Precisamos discutir quem paga a conta, quais despesas são priorizadas e por que o debate fiscal costuma deixar os juros da dívida fora do resultado primário.</p></div>
+    <p class="muted">Nossa tarefa imediata é informar, disputar a opinião pública e pressionar para barrar ou modificar os mecanismos prejudiciais do projeto.</p>
+   </section>
+
+   <section id="entenda">
+    <div class="section-no">02 · Em poucas palavras</div><h2>O que é o PLP 299/2026?</h2>
+    <p>É um projeto de lei complementar apresentado pelo senador Jaques Wagner (PT-BA), a pedido do Poder Executivo. O texto-base aprovado no Senado é um substitutivo relatado por Eduardo Braga (MDB-AM).</p>
+    <p>O governo apresenta o pacote como uma forma de melhorar o resultado primário e dar mais instrumentos para administrar o orçamento. Resultado primário é a diferença entre receitas e despesas do governo <strong>antes do pagamento dos juros da dívida</strong>.</p>
+    <div class="grid2">
+     <div class="stat"><strong>2,5% → 2%</strong><span>Limite de crescimento real das despesas, em determinadas condições.</span></div>
+     <div class="stat"><strong>R$ 12 bi</strong><span>Ordem de grandeza estimada para a diferença de 0,5 ponto percentual no limite agregado.</span></div>
+    </div>
+    <p class="note">Atenção: a regra de 2% não é uma redução automática e universal em todos os anos. Ela opera nos exercícios em que forem adotadas as medidas de contenção previstas no projeto e quando o cálculo normal permitiria crescimento acima de 2%.</p>
+    <div class="card"><strong>Quem apresentou?</strong> Jaques Wagner, em 11/11/2026, a pedido do Executivo Federal. <strong>Quem relatou?</strong> Eduardo Braga, que apresentou o substitutivo aprovado no texto-base pelo Senado.</div>
+   </section>
+
+   <section id="problemas">
+    <div class="section-no">03 · O que está em disputa</div><h2>Onde estão os problemas?</h2>
+    <div class="card redline">
+     <h3>1. Menos espaço para as despesas públicas</h3>
+     <p>Em determinadas condições, o crescimento real máximo do limite de despesas passa de até 2,5% para 2%. A Consultoria do Senado estima que a diferença de 0,5 ponto percentual pode representar cerca de R$ 12 bilhões, considerando um limite agregado da ordem de trilhões.</p>
+     <p><strong>Na prática:</strong> menos espaço potencial para executar e ampliar despesas públicas. Isso pode aumentar a pressão sobre investimentos, manutenção de serviços, programas e despesas discricionárias.</p>
+     <p class="note">Não significa que R$ 12 bilhões sejam retirados diretamente da saúde ou da educação. É uma estimativa de redução do espaço agregado, não um corte proporcional por área.</p>
+    </div>
+    <div class="card redline">
+     <h3>2. Mais possibilidades de contingenciamento</h3>
+     <p>Contingenciar é restringir temporariamente a execução de recursos previstos no orçamento. O projeto amplia a possibilidade de bloqueio mesmo quando a projeção do resultado primário está dentro do intervalo de tolerância da meta.</p>
+     <p><strong>Na prática:</strong> recursos autorizados podem ficar sem execução. Isso pode atingir investimentos, manutenção, expansão de serviços e programas públicos.</p>
+     <p class="note">Os pisos constitucionais da saúde e da educação não são diretamente liberados para contingenciamento. Mas outras despesas dessas áreas podem ser restringidas, afetando a capacidade de funcionamento e expansão das políticas.</p>
+    </div>
+    <div class="card redline">
+     <h3>3. Petróleo, base de cálculo e financiamento do SUS</h3>
+     <p>Este é um dos pontos mais importantes — e exige atenção. A Constituição determina que a União aplique no mínimo <strong>15% da Receita Corrente Líquida (RCL) em ações e serviços públicos de saúde</strong>. Esse piso não é um valor fixo em reais: é um percentual aplicado sobre uma base de receitas.</p>
+     <p><strong>Por que mexer na base importa?</strong> Se determinadas receitas deixam de entrar na base considerada para calcular a RCL usada no piso, os mesmos 15% passam a incidir sobre um valor menor. O percentual constitucional pode continuar escrito na Constituição, mas o montante mínimo correspondente em reais diminui. Portanto, preservar o percentual não garante, por si só, a preservação do mesmo nível de financiamento.</p>
+     <div class="mini-example">
+      <strong>Exemplo didático — valores hipotéticos</strong>
+      <div class="example-row"><span>Base de cálculo</span><b>R$ 100 bilhões</b><span>15% = R$ 15 bilhões de piso</span></div>
+      <div class="example-row"><span>Base após exclusão hipotética de R$ 10 bi</span><b>R$ 90 bilhões</b><span>15% = R$ 13,5 bilhões de piso</span></div>
+      <p class="example-diff">Diferença no mínimo obrigatório: R$ 1,5 bilhão</p>
+      <small>O exemplo explica a lógica matemática; não é uma estimativa do impacto efetivo do PLP.</small>
+     </div>
+     <p>Isso não significa que o governo necessariamente gastará exatamente esse valor a menos: pode aplicar acima do piso. Mas uma base menor reduz a obrigação mínima e abre espaço para um financiamento menor sem descumprir o percentual. Na vida real, menos recursos podem significar maior pressão sobre atenção básica, hospitais, medicamentos, vigilância e serviços utilizados diariamente por milhões de pessoas.</p>
+     <p><strong>O que dizem as fontes?</strong> O Conselho Nacional de Saúde alerta para o risco de redução do financiamento mínimo e estima impacto da ordem de R$ 10 bilhões em 2027. A Consultoria de Orçamentos do Senado apresenta uma interpretação jurídica diferente sobre o alcance da regra e as vinculações constitucionais. Há, portanto, uma controvérsia técnica real — que precisa ser explicitada, não escondida.</p>
+     <p><strong>Como falar disso:</strong> não diga que R$ 10 bilhões já foram cortados. Diga que o CNS alerta para esse risco e que alterar a base de cálculo pode reduzir o valor em reais assegurado pelo piso. Exija esclarecimento e proteção efetiva do financiamento constitucional do SUS.</p>
+     <p class="note">A regra específica da RCL não altera diretamente o piso da educação, que corresponde a 18% da receita de impostos da União, incluídas as transferências. Mas a educação pode ser pressionada pelos demais mecanismos de contenção do orçamento.</p>
+    </div>
+    <div class="card goldline">
+     <h3>4. Nem tudo no pacote é igual</h3>
+     <p>O texto também amplia a redução de benefícios tributários de 10% para 20%, com exceções. Rever privilégios e renúncias fiscais pode ser positivo. Nossa crítica não é uma defesa indiscriminada de benefícios fiscais: é ao pacote de austeridade e à ampliação dos mecanismos de contenção do orçamento.</p>
+    </div>
+   </section>
+
+   <section id="perguntas">
+    <div class="section-no">04 · Respostas curtas</div><h2>Perguntas que podem aparecer</h2>
+    <details class="accordion"><summary>“Se o percentual constitucional da saúde continua em 15%, como o piso pode diminuir?”</summary><div class="answer">Porque o piso é calculado aplicando 15% sobre a Receita Corrente Líquida. Se a base considerada fica menor, o mesmo percentual resulta em menos dinheiro. Exemplo hipotético: 15% de R$ 100 bilhões são R$ 15 bilhões; 15% de R$ 90 bilhões são R$ 13,5 bilhões. O percentual não mudou, mas o valor mínimo em reais caiu. É por isso que não basta olhar apenas para o número de 15%: também é preciso observar quais receitas entram na base. No caso do PLP, o alcance jurídico dessa mudança é objeto de divergência técnica; o CNS alerta para risco de redução do piso e a Conorf apresenta leitura diferente.</div></details>
+    <details class="accordion"><summary>“Então o piso da saúde já foi reduzido em R$ 10 bilhões?”</summary><div class="answer">Não. Os cerca de R$ 10 bilhões são uma estimativa de impacto/alerta apresentada pelo Conselho Nacional de Saúde para 2027, não um corte já executado ou um valor incontroverso. Use a estimativa atribuindo-a ao CNS e explique que há divergência técnica sobre a interpretação da regra.</div></details>
+    <details class="accordion"><summary>“E o piso da educação também muda por causa do petróleo?”</summary><div class="answer">Não por essa regra específica. O piso federal da educação é de 18% da receita de impostos, incluídas as transferências, e não usa a RCL como base. Ainda assim, investimentos, manutenção, expansão de universidades, institutos e programas educacionais podem sofrer pressão pelos demais mecanismos de contenção previstos no pacote.</div></details>
+    <details class="accordion"><summary>“Então o que são os R$ 12 bilhões?”</summary><div class="answer">É uma estimativa da ordem de grandeza da diferença entre os limites de crescimento real de 2,5% e 2%, aplicada ao limite agregado de despesas. Não é um corte direto de R$ 12 bilhões em uma área específica. O efeito depende das condições de acionamento da regra e da execução orçamentária.</div></details>
+    <details class="accordion"><summary>“Os R$ 10 bilhões do SUS já foram cortados?”</summary><div class="answer">Não. Esse valor é uma estimativa de impacto apresentada pelo Conselho Nacional de Saúde. Deve ser comunicado como alerta sobre o risco para o financiamento mínimo da saúde, e não como um corte já efetivado.</div></details>
+    <details class="accordion"><summary>“Mas o projeto também reduz benefícios fiscais, isso não é bom?”</summary><div class="answer">Rever privilégios tributários pode ser positivo. Não precisamos defender todo benefício fiscal para criticar a austeridade. Nossa crítica se dirige aos mecanismos que restringem o crescimento e a execução das despesas públicas e podem comprometer políticas sociais.</div></details>
+    <details class="accordion"><summary>“Criticar isso é ser contra Lula?”</summary><div class="answer">Não. O projeto foi apresentado a pedido do Executivo e nós discordamos frontalmente de seu conteúdo. Isso não significa oposição automática ao governo ou ataque pessoal ao presidente. Significa defender os direitos sociais e cobrar coerência com os compromissos públicos assumidos.</div></details>
+    <details class="accordion"><summary>“Nossa posição é a mesma da direita?”</summary><div class="answer">Não. Setores da direita criticam o projeto por razões próprias, muitas vezes ligadas a interesses empresariais e tributários. Nossa posição parte da defesa do financiamento dos direitos sociais e dos interesses da classe trabalhadora. Uma coincidência pontual de crítica não significa identidade política.</div></details>
+    <details class="accordion"><summary>“Precisamos defender Janones, Jones Manoel ou outra figura?”</summary><div class="answer">Não. A pauta não é a defesa ou o ataque a indivíduos. Não precisamos entrar em julgamentos pessoais ou morais, nem transformar parlamentares e figuras públicas no centro da mobilização. O centro é o conteúdo do projeto, seus efeitos e a urgência de enfrentá-lo.</div></details>
+   </section>
+
+   <section id="linha">
+    <div class="section-no">05 · Orientação política</div><h2>Sem personalismo. Com posição.</h2>
+    <p>Não fazemos oposição ao governo pela oposição, mas também não aceitamos alinhamento automático. Nossa independência política exige reconhecer medidas positivas, defender conquistas e combater decisões concretas com as quais discordamos.</p>
+    <p>Não se trata de atacar Lula pessoalmente. Também não se trata de defender ou atacar Janones, Jones Manoel ou qualquer outra figura. Não precisamos transformar a mobilização em disputa de reputações, julgamentos morais ou torcida por personagens políticos.</p>
+    <p>O orçamento expressa escolhas políticas. É legítimo perguntar quem paga a conta, quais interesses são protegidos e por que a contenção das despesas sociais aparece como resposta recorrente, enquanto os juros da dívida ficam fora do resultado primário.</p>
+    <div class="card redline"><h3>O que queremos alcançar agora</h3><p>Ampliar a compreensão pública sobre os efeitos do PLP, organizar pressão social e política e defender a rejeição ou revisão dos mecanismos de austeridade que ameaçam o financiamento das políticas públicas.</p></div>
+   </section>
+
+   <section id="conteudo">
+    <div class="section-no">06 · Da análise à comunicação</div><h2>Como transformar isso em conteúdo?</h2>
+    <p>Para vídeo curto, Reels ou TikTok, não tente explicar o projeto inteiro em uma publicação. Escolha <strong>uma ideia central</strong>, abra com uma pergunta ou afirmação forte, explique com um exemplo e feche com a posição política.</p>
+    <div class="steps">
+     <div class="step"><div><strong>Gancho (3–5 segundos)</strong><br><span class="muted">Uma pergunta ou frase que apresente o problema.</span><p>Ex.: “Você sabe o que significa limitar ainda mais o crescimento do orçamento público?”</p></div></div>
+     <div class="step"><div><strong>Explicação (15–25 segundos)</strong><br><span class="muted">Explique um mecanismo, sem empilhar números.</span><p>Ex.: “O projeto pode reduzir de 2,5% para 2% o crescimento real do limite de despesas, em determinadas condições. Isso representa menos espaço para o orçamento crescer.”</p></div></div>
+     <div class="step"><div><strong>Consequência concreta (10–15 segundos)</strong><br><span class="muted">Mostre por que isso importa na vida real.</span><p>Ex.: “Menos espaço orçamentário pode pressionar investimentos, manutenção de serviços e programas públicos.”</p></div></div>
+     <div class="step"><div><strong>Fechamento (5–10 segundos)</strong><br><span class="muted">Apresente a posição e convide ao debate.</span><p>Ex.: “O orçamento precisa financiar direitos. Vamos discutir prioridades e barrar a austeridade sobre as políticas sociais.”</p></div></div>
+    </div>
+    <h3 style="margin-top:26px">Ganchos que podem virar conteúdo</h3>
+    <div class="copybox"><button class="copybtn" onclick="copyText(this)">Copiar</button><p>“O governo diz que é ajuste fiscal. Mas ajuste para quem — e à custa de quê?”</p></div>
+    <div class="copybox"><button class="copybtn" onclick="copyText(this)">Copiar</button><p>“O que significa tirar meio ponto percentual do crescimento do orçamento? Pode significar bilhões a menos de espaço para políticas públicas.”</p></div>
+    <div class="copybox"><button class="copybtn" onclick="copyText(this)">Copiar</button><p>“O piso da saúde é 15% da Receita Corrente Líquida. Se a base de cálculo diminui, os mesmos 15% podem representar menos dinheiro. Não basta preservar o percentual no papel: é preciso preservar a base que garante o financiamento do SUS.”</p></div>
+    <div class="copybox"><button class="copybtn" onclick="copyText(this)">Copiar</button><p>“Imagine 15% de R$ 100 bilhões: são R$ 15 bilhões. Se a base cai para R$ 90 bilhões, o piso passa a R$ 13,5 bilhões. O percentual continua igual, mas a garantia financeira diminui. É essa lógica que precisamos discutir no caso das receitas do petróleo.”</p></div>
+    <div class="copybox"><button class="copybtn" onclick="copyText(this)">Copiar</button><p>“A discussão não é sobre gostar ou não de um político. É sobre o orçamento, os direitos sociais e quem paga a conta.”</p></div>
+    <h3 style="margin-top:26px">Cuidados na hora de publicar</h3>
+    <div class="do-dont">
+     <div class="do"><b>Faça</b><ul><li>Escolha um ponto por vídeo.</li><li>Use números com contexto.</li><li>Diferencie corte, bloqueio e contingenciamento.</li><li>Mostre o efeito concreto sobre serviços e direitos.</li><li>Use fontes e deixe os links na legenda.</li></ul></div>
+     <div class="dont"><b>Evite</b><ul><li>Dizer que R$ 12 bi serão cortados diretamente da saúde.</li><li>Tratar a estimativa do CNS como corte consumado.</li><li>Dizer que o piso da saúde está intacto só porque o percentual de 15% continua escrito: a base de cálculo também importa.</li><li>Confundir o piso da educação (18% da receita de impostos) com o piso da saúde (15% da RCL).</li><li>Transformar o debate em ataque pessoal ou defesa de figuras.</li><li>Repetir argumentos da direita sem explicar nossa posição.</li></ul></div>
+    </div>
+    <div class="copybox"><button class="copybtn" onclick="copyText(this)">Copiar</button><p><strong>Texto-base para legenda:</strong><br>O PLP 299/2026 amplia mecanismos de contenção do orçamento e pode restringir o espaço para investimentos, serviços e políticas públicas. Não é uma discussão distante ou apenas técnica: é uma disputa sobre prioridades e sobre o financiamento dos direitos sociais. Precisamos debater, pressionar e barrar os mecanismos de austeridade que prejudicam a população.</p></div>
+   </section>
+
+   <section id="tramitação">
+    <div class="section-no">07 · Acompanhar</div><h2>Em que fase está?</h2>
+    <p>Em 16 de novembro de 2026, o texto-base havia sido aprovado pelo Senado em 12/11, por 45 votos a 31. A votação ocorreu em regime de urgência, aprovado por 40 votos a 38. Quatro destaques ainda estavam pendentes, com votação prevista para 17/11. Depois de concluída a etapa no Senado, a matéria seguirá para a Câmara.</p>
+    <div class="card goldline"><strong>Importante:</strong> o PLP ainda não é lei. Como a tramitação pode mudar rapidamente, confira sempre a situação atualizada nos canais oficiais antes de publicar datas ou afirmar em que etapa o projeto está.</div>
+   </section>
+
+   <section id="fontes" class="sources">
+    <div class="section-no">08 · Consulta e checagem</div><h2>Fontes para aprofundar</h2>
+    <p class="muted">Use as fontes oficiais para conferir o texto, os números e a tramitação. Em caso de dúvida, não publique uma afirmação como fato antes de verificar.</p>
+    <a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/176328" target="_blank" rel="noopener">↗ Senado Federal — página oficial e tramitação do PLP 299/2026</a>
+    <a href="https://www12.senado.leg.br/noticias/materias/2026/11/16/plenario-retoma-votacao-de-medidas-de-ajuste-fiscal-nesta-terca" target="_blank" rel="noopener">↗ Senado Notícias — retomada da votação em 17 de novembro</a>
+    <a href="https://www12.senado.leg.br/orcamento/documentos/estudos/tipos-de-estudos/notas-tecnicas-e-informativos/nota_informativa_texto_aprovado_plp_299_2026.pdf" target="_blank" rel="noopener">↗ Consultoria de Orçamentos do Senado — nota informativa sobre o texto aprovado</a>
+    <a href="https://www.gov.br/conselho-nacional-de-saude/pt-br/assuntos/noticias/2026/novembro/nota-publica-do-conselho-nacional-de-saude/" target="_blank" rel="noopener">↗ Conselho Nacional de Saúde — manifestação sobre o financiamento do SUS</a>
+    <p class="note">Atualização legislativa registrada em 16/11/2026. Este guia é um material de orientação política e comunicação, não substitui a leitura do texto legal nem a checagem de atualizações legislativas.</p>
+   </section>
+  </main>
+ </div>
+ <footer class="footer"><strong>GUIA DE MOBILIZAÇÃO · PLP 299/2026</strong><br>Material de apoio para formação, debate e produção de conteúdo.<br><a class="backtop" href="#inicio">↑ Voltar ao início</a></footer>
+</div>
+<script>
+function copyText(button){
+ const box=button.parentElement;
+ const text=box.innerText.replace(/^Copiar\\s*/,'').trim();
+ if(navigator.clipboard && window.isSecureContext){
+  navigator.clipboard.writeText(text).then(()=>{button.textContent='Copiado!';setTimeout(()=>button.textContent='Copiar',1400)});
+ }else{
+  const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();
+  try{document.execCommand('copy');button.textContent='Copiado!';setTimeout(()=>button.textContent='Copiar',1400)}catch(e){button.textContent='Selecione o texto'}
+  area.remove();
+ }
+}
+</script>
+</body>
+</html>
